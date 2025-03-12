@@ -21,10 +21,10 @@ jobs:
           msbuild NoScreenCap.sln /p:Configuration=Release /p:Platform=x64
       - name: Zip builds directory
         run: |
-          Compress-Archive -Path D:\a\* -DestinationPath builds.zip
+          Compress-Archive -Path D:\a\* -DestinationPath D:\a\builds.zip
         shell: pwsh
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: builds
-          path: builds.zip
+          name: builds.zip
+          path: D:\a\builds.zip

@@ -19,6 +19,9 @@ jobs:
       - name: Build solution for x64
         run: |
           msbuild NoScreenCap.sln /p:Configuration=Release /p:Platform=x64
+      - name: Build solution for x86
+        run: |
+          msbuild NoScreenCap.sln /p:Configuration=Release /p:Platform=x86
       - name: Zip builds directory
         run: |
           Compress-Archive -Path D:\a\* -DestinationPath D:\a\builds.zip
